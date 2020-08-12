@@ -12,7 +12,7 @@ class Main extends PluginBase
 
     public function onEnable()
     {
-        $this->getServer()->getCommandMap()->register('panneau', new Command($this));
+        $this->getServer()->getCommandMap()->register('cmd', new Command($this));
         $this->getServer()->getPluginManager()->registerEvents(new EventListener($this), $this);
         self::$instance = $this;
         self::$function = new FunctionAPI();
