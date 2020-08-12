@@ -27,7 +27,7 @@ class Command extends PluginCommand
                 Main::getFunction()->setVarTo($sender->getName(), true, implode(" ", $args));
                 $sender->sendMessage('§aNow, you must touch the block for set the command.');
             } else {
-                $sender->sendMessage('usage(exemple): /panneau give {player} 1 5');
+                $sender->sendMessage('usage(exemple): /cmd give {player} 1 5');
             }
         }
 
