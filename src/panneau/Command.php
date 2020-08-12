@@ -13,7 +13,7 @@ class Command extends PluginCommand
     public function __construct(Main $plugin)
     {
 
-        parent::__construct("panneau", $plugin);   //Construction de la commandes (nom de la commande, plugin).
+        parent::__construct("cmd", $plugin);   //Construction de la commandes (nom de la commande, plugin).
         $this->setDescription("Affiche l'id de l'item que tu as dans la main");   //Définit la description de la commande.
         $this->plugin = $plugin;
 
