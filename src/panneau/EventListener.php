@@ -28,6 +28,7 @@ class EventListener implements Listener
             $cmd = Main::getFunction()->getVar($name);
             $this->data->set($block->getX() .":". $block->getY() .":". $block->getZ(), $cmd);
             $this->data->save();
+            $player->sendMessage('§aYou place a command-block');
             Main::getFunction()->setVarTo($name, false);
         } elseif ( $this->data->exists($block->getX() .":". $block->getY() .":". $block->getZ()) ) {
             $this->pl->getServer()->dispatchCommand($player, str_replace('{player}', $player->getName(), $this->data->get($block->getX() .":". $block->getY() .":". $block->getZ())));
